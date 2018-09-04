@@ -22,7 +22,7 @@ public class SparkDemo01 {
                 "<p>This web app is powered by \n" +
                 "<a href='https://github.com/zhiqinlei1998/sparkjava-01'>this github repo</a></p>\n";
 		spark.Spark.get("/", (req, res) -> html);
-
+                spark.Spark.get("/hello", (req, res) -> "<p><b>Hello, World!</b>  You just clicked the first link on my web app.</p>");
 	}
 	
     static int getHerokuAssignedPort() {
