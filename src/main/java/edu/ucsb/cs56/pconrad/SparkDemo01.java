@@ -18,7 +18,10 @@ public class SparkDemo01 {
 		System.out.println("");						  
 		System.out.println("In browser, visit: http://localhost:" + getHerokuAssignedPort() + "/hello");
 		System.out.println("");
-		spark.Spark.get("/", (req, res) -> "<b>Hello World!</b>\n");
+	        String html = "<h1><a href='/hello'>Hello</a> World!</h1>\n" +
+                "<p>This web app is powered by \n" +
+                "<a href='https://github.com/zhiqinlei1998/sparkjava-01'>this github repo</a></p>\n";
+		spark.Spark.get("/", (req, res) -> html);
 
 	}
 	
